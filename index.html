@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Analytics Dashboard - Attrition Analysis Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset and Typography */
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #ddc7a0; /* Beige Background */
+            color: #5c3a2f; /* Brown Text */
+        }
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #9ab6e7;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            color: #0f0642; /* Power BI Blue */
+            border-bottom: 3px solid #0078d4;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #5c3a2f; /* Brown Heading Text */
+            margin-top: 30px;
+            border-left: 5px solid #0078d4;
+            padding-left: 10px;
+        }
+        p, ul, table {
+            color: #5c3a2f; /* Ensure all text is brown */
+        }
+
+        /* Top Navigation Button */
+        .nav-home {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #8b4513; /* Saddle Brown */
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .nav-home:hover {
+            background-color: #a0522d; /* Slinky Brown */
+        }
+
+        /* Asset/Button Styling */
+        .assets {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 30px 0;
+            justify-content: center;
+        }
+        .asset-btn {
+            background-color: #2ecc71; /* Green for action */
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            text-align: center;
+            flex: 1 1 200px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .asset-btn:hover {
+            background-color: #27ae60;
+        }
+        .asset-btn.github {
+            background-color: #333;
+        }
+        .asset-btn.github:hover {
+            background-color: #555;
+        }
+        .asset-btn.report {
+            background-color: #8b4513; /* Brown for Report */
+        }
+        .asset-btn.report:hover {
+            background-color: #a0522d;
+        }
+
+        /* Table Styling for Metrics */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #e0e0e0; 
+            color: #5c3a2f; 
+        }
+.dashboard-img-container {
+    text-align: center; /* Centers the image */
+    margin: 20px 0; /* Adds vertical spacing */
+}
+.dashboard-img {
+    max-width: 80%; /* Limits the image width to 80% of the container */
+    height: auto;
+    border: 3px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>HR Analytics Dashboard: Employee Attrition Analysis </h1>
+
+    <p>This project focused on analyzing employee attrition trends and providing actionable insights to help organizations improve employee retention. Using Power BI on a dataset of 1,470 employees, I identified key risk factors and delivered data-driven retention strategies.</p>
+
+    <div class="dashboard-img-container">
+    <img src="Dashboard.png" alt="HR Analytics Dashboard Screenshot" class="dashboard-img">
+    <p style="font-size: 0.9em; color: #8b4513;">Click 'Watch Interactive Demo' below for a live walkthrough.</p>
+    </div>
+
+    <div class="assets">
+        <a href="https://github.com/Yugraj15/HRAnalytics-Dasboard" class="asset-btn github">View Code & Data on GitHub 📂</a>
+        <a href="https://vimeo.com/1124175918?share=copy" class="asset-btn">Watch Interactive Demo (Video) 📹</a>
+        <a href="https://github.com/Yugraj15/HRAnalytics-Dasboard/raw/refs/heads/main/HR%20ANALYTICS%20DASHBOARD.pbit" class="asset-btn">Download Power BI File (.pbix) 📥</a>
+        <a href="Power BI Attrition Analysis Report.pdf" class="asset-btn report">View Full Project Report (PDF/HTML) 📄</a>
+    </div>
+
+    <h2>Executive Summary & Key Findings</h2>
+    <ul>
+        <li>Attrition Rate:Established a company-wide turnover rate of 16.1%.</li>
+        <li>Critical Age Group: Attrition is highest among 26–35 year-olds (116 employees), indicating major churn in the early-to-mid career phase.</li>
+        <li>Compensation Risk: The "Up to 5k" salary slab contributed the highest number of departures (163 attritions), highlighting compensation as a primary retention issue.</li>
+        <li>High-Risk Roles: Critical roles most impacted were Laboratory Technicians (62), Sales Executives (57), and Research Scientists (47).</li>
+    </ul>
+
+    <h2>Interactive Features and UX </h2>
+    <p>The dashboard was designed for self-service analysis, allowing HR stakeholders to drill down into data quickly and intuitively.</p>
+    <ul>
+        <li>Cross-Filtering: All visuals and KPI cards dynamically update when a user selects a segment.</li>
+        <li>Slicers:Includes interactive filters for **Department, Education, Age Band, Salary Slab, and Job Role.</li>
+        <li>Real-time Metrics: KPI cards (Attrition Rate, Avg. Salary) recalculate in real-time based on filter selection.</li>
+    </ul>
+
+    <h2>Core Metrics (KPIs)</h2>
+    <table>
+        <thead>
+            <tr><th>Metric</th><th>Value</th><th>Note</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Total Employees</td><td>1,470</td><td>Dataset size</td></tr>
+            <tr><td>Attrition Count</td><td>237</td><td>Total number of departures</td></tr>
+            <tr><td>Attrition Rate</td><td>16.1%</td><td>Key Measure of Turnover</td></tr>
+            <tr><td>Average Age</td><td>37 years</td><td></td></tr>
+            <tr><td>Average Salary</td><td>$6.5K</td><td></td></tr>
+            <tr><td>Average Working Years</td><td>7.01 years</td><td>Average Tenure</td></tr>
+        </tbody>
+    </table>
+
+    <h2>Actionable Recommendations</h2>
+    <p>Recommendations were delivered to mitigate the identified risks:</p>
+    <ol>
+        <li>Targeted Compensation Review: Immediate salary adjustments for the slab to address the primary driver of attrition.</li>
+        <li>Enhanced Career Development: Launch a mentorship and clear pathing program for the 26–35 age group.</li>
+        <li>Role-Specific Retention: Implement stay interviews and tailored incentive packages for high-risk roles (Lab Techs, Sales).</li>
+    </ol>
+
+    <hr>
+    <p style="text-align: center; font-size: 0.9em; color: #777;">&copy; [Your Name/Year]. Powered by Power BI, DAX, and Data Storytelling.</p>
+
+</div>
+
+</body>
+</html>
