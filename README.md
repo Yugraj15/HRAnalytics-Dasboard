@@ -82,4 +82,6 @@ This project strengthened my ability to:
 * Translate raw data into actionable business recommendations.
 * Bridge the gap between data insights and HR strategy.
 
-<img width="1659" height="936" alt="image" src="https://github.com/user-attachments/assets/33763ce9-097b-4675-aba8-be9e1ad71729" />
+<img width="1659" height="936" alt="Dashboard" src="https://github.com/user-attachments/assets/6235b4cf-03c7-4d5d-8d2e-13b43a191632" />
+
+
